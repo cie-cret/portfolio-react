@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './colors.scss';
+@import './breakpoints.scss';
+
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 50vw;
+  height: 84vh;
+  animation: dropTop 1000ms;
+  padding: 3rem 5rem;
+  z-index: 30;
+
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+
+  &.offLoad {
+      animation: toTop 300ms;
+  }
+
+  @include mobile {
+    padding: 1.5rem 2.5rem;
+  }
+
+  @include tablet {
+    @include verticalbp {
+      padding: 3rem 5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    @include horizontalbp {
+      padding: 3rem 5rem;
+    }
+  }
+}
+
+.app-container {
+  overflow: hidden;
+}
+
+.profile-pic {
+  outline: 8px solid $Blue;
+  scale: 1;
+  transition: all 200ms ease-in;
+
+  &:hover {
+
+    + .mini-nav {
+      scale: (0.8);
+      transition: scale 150ms ease-in;
+    }
+  
+    &:active {
+      scale: 0.9;
+      transition: all 100ms ease-out;
+    }
+  }
+
+  &.active {
+    scale: 0.93;
+    outline: 6px solid $Blue;
+    transition: all 100ms ease-in;
+
+    + .mini-nav {
+      scale: (1);
+      transition: all 100ms ease-in;
+      animation: bounce 150ms ease-in;
+      animation-delay: 80ms;
+    }
+
+    + .mini-nav .icon {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+}
+
+span.mark {
+  color: $Blue;
+}
+
+.mini-nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  background-color: $Gray;
+  scale: (0.7);
+  transition: all 200ms ease-in;
+  
+  &.full {
+    scale: (10);
+    transition: all 400ms ease-in;
+
+    @include mobile {
+      scale: (8);
+      transition: all 400ms ease-in;
+    }
+
+    @include tablet {
+      scale: (10);
+      transition: all 400ms ease-in;
+    }
+
+    @include desktop {
+      scale: (15);
+      transition: all 500ms ease-in;
+    }
+    
+    &.cyan {
+      background-color: rgba(50, 173, 230, 0.1);
+    }
+
+    &.indigo {
+      background-color: rgba(88, 86, 214, 0.1);
+    }
+
+    &.green {
+      background-color: rgba(52, 199, 89, 0.05);
+    }
+  } 
+}
+
+.icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@mixin icon-bounce {
+  cursor: pointer;
+  scale: (1.2);
+  transition: scale 100ms ease-in;
+  animation: iconBounce 100ms ease-out;
+  animation-delay: 80ms;
+}
+
+.about {
+  left: 0;
+  right: 0;
+  top: 4%;
+  margin-inline: auto;
+  fill: $Light-accent;
+  transition: scale 100ms ease-in;
+
+  &:hover {
+    fill: $Cyan;
+    @include icon-bounce;
+  }
+}
+
+.experience {
+  right: 10%;
+  bottom: 23%;
+  fill: $Light-accent;
+  transition: scale 100ms ease-in;
+
+  &:hover {
+    fill: $Indigo;
+    @include icon-bounce;
+  }
+}
+
+.contact {
+  left: 10%;
+  bottom: 23%;
+  fill: $Light-accent;
+  transition: scale 100ms ease-in;
+
+  &:hover {
+    fill: $Green;
+    @include icon-bounce;
+  }
+}
+
+button #about, button #experience, button #contact {
+  transition: all 100ms ease-out;
+
+  &:active {
+      height: 10%;
+      width: 10%;
+      transition: all 100ms ease-in;
+  }
+}
+
+// @mixin bubble ($size, $z) {
+//   width: $size;
+//   height: $size;
+//   border: 0;
+//   border-radius: 50%;
+//   position: absolute;
+//   z-index: $z;
+// }
+
+// .bubble1 {
+//   @include bubble(25px, 1) {
+//   background-color: $White !important;
+//   box-shadow: inset 0px 0px 20px $Blue,
+//               inset 20px 0px 80px #fff,
+//               inset -20px 0px 80px #fff,
+//               inset 20px 0px 300px #f0faff,
+//               // inset -20px 0px 300px #70d7ff,
+//   }
+// }
+
+@keyframes bounce {
+  25% {scale: (1.1);}
+  50% {scale: (1.15);}
+  75% {scale: (1.05);}
+  100% {scale: (1.0);}
+}
+
+@keyframes iconBounce {
+  50% {scale: (1.2);}
+  100% {scale: (1.4);}
+}
+
+@keyframes iconBounce2 {
+  50% {scale: (1.4);}
+  100% {scale: (1.2);}
+}
+
+@keyframes dropTop {
+  0% {transform: translateY(-100%);}
+  20% {transform: translateY(10%);}
+  40% {transform: translateY(-5%);}
+  60% {transform: translateY(0%);}
+  80% {transform: translateY(-1%);}
+  100% {transform: translateY(0%);}
+}
+
+@keyframes toTop {
+  0% {transform: translateY(0%);}
+  100% {transform: translateY(-110%);}
+}

@@ -1,0 +1,238 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+img {
+  -webkit-user-drag: none;
+  pointer-events: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 50vw;
+  height: 84vh;
+  animation: dropTop 1000ms;
+  padding: 3rem 5rem;
+  z-index: 30;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.container.offLoad {
+  animation: toTop 300ms;
+}
+@media (min-width: 360px) {
+  .container {
+    padding: 1.5rem 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .container {
+    padding: 3rem 5rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .container {
+    padding: 3rem 5rem;
+  }
+}
+
+.app-container {
+  overflow: hidden;
+}
+
+.profile-pic {
+  outline: 8px solid rgb(0, 122, 255);
+  scale: 1;
+  transition: all 200ms ease-in;
+}
+.profile-pic:hover + .mini-nav {
+  scale: 0.8;
+  transition: scale 150ms ease-in;
+}
+.profile-pic:hover:active {
+  scale: 0.9;
+  transition: all 100ms ease-out;
+}
+.profile-pic.active {
+  scale: 0.93;
+  outline: 6px solid rgb(0, 122, 255);
+  transition: all 100ms ease-in;
+}
+.profile-pic.active + .mini-nav {
+  scale: 1;
+  transition: all 100ms ease-in;
+  animation: bounce 150ms ease-in;
+  animation-delay: 80ms;
+}
+.profile-pic.active + .mini-nav .icon {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+span.mark {
+  color: rgb(0, 122, 255);
+}
+
+.mini-nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  background-color: rgb(229, 229, 234);
+  scale: 0.7;
+  transition: all 200ms ease-in;
+}
+.mini-nav.full {
+  scale: 10;
+  transition: all 400ms ease-in;
+}
+@media (min-width: 360px) {
+  .mini-nav.full {
+    scale: 8;
+    transition: all 400ms ease-in;
+  }
+}
+@media (min-width: 768px) {
+  .mini-nav.full {
+    scale: 10;
+    transition: all 400ms ease-in;
+  }
+}
+@media (min-width: 1920px) {
+  .mini-nav.full {
+    scale: 15;
+    transition: all 500ms ease-in;
+  }
+}
+.mini-nav.full.cyan {
+  background-color: rgba(50, 173, 230, 0.1);
+}
+.mini-nav.full.indigo {
+  background-color: rgba(88, 86, 214, 0.1);
+}
+.mini-nav.full.green {
+  background-color: rgba(52, 199, 89, 0.05);
+}
+
+.icon {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.about {
+  left: 0;
+  right: 0;
+  top: 4%;
+  margin-inline: auto;
+  fill: rgb(58, 58, 60);
+  transition: scale 100ms ease-in;
+}
+.about:hover {
+  fill: rgb(50, 173, 230);
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 100ms ease-in;
+  animation: iconBounce 100ms ease-out;
+  animation-delay: 80ms;
+}
+
+.experience {
+  right: 10%;
+  bottom: 23%;
+  fill: rgb(58, 58, 60);
+  transition: scale 100ms ease-in;
+}
+.experience:hover {
+  fill: rgb(88, 86, 214);
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 100ms ease-in;
+  animation: iconBounce 100ms ease-out;
+  animation-delay: 80ms;
+}
+
+.contact {
+  left: 10%;
+  bottom: 23%;
+  fill: rgb(58, 58, 60);
+  transition: scale 100ms ease-in;
+}
+.contact:hover {
+  fill: rgb(52, 199, 89);
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 100ms ease-in;
+  animation: iconBounce 100ms ease-out;
+  animation-delay: 80ms;
+}
+
+button #about, button #experience, button #contact {
+  transition: all 100ms ease-out;
+}
+button #about:active, button #experience:active, button #contact:active {
+  height: 10%;
+  width: 10%;
+  transition: all 100ms ease-in;
+}
+
+@keyframes bounce {
+  25% {
+    scale: 1.1;
+  }
+  50% {
+    scale: 1.15;
+  }
+  75% {
+    scale: 1.05;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes iconBounce {
+  50% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1.4;
+  }
+}
+@keyframes iconBounce2 {
+  50% {
+    scale: 1.4;
+  }
+  100% {
+    scale: 1.2;
+  }
+}
+@keyframes dropTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  20% {
+    transform: translateY(10%);
+  }
+  40% {
+    transform: translateY(-5%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes toTop {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-110%);
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

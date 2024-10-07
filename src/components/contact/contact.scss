@@ -1,0 +1,405 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../../scss/breakpoints.scss';
+
+$White: #fdfdfd;
+$Orange: rgb(255, 149, 0);
+$Green: rgb(52, 199, 89);
+$Cyan: rgb(50, 173, 230);
+$Blue: rgb(0, 122, 255);
+$Indigo: rgb(88, 86, 214);
+$Gray: rgb(229, 229, 234);
+$Light-accent: rgb(58, 58, 60);
+
+@mixin icon-bounce {
+    cursor: pointer;
+    scale: (1.2);
+    transition: scale 150ms ease-in;
+    animation: iconBounce2 150ms ease-out;
+    animation-delay: 140ms;
+}
+
+.contact-close-icon {
+    fill: $Green;
+    position: absolute;
+    bottom: -4%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        @include icon-bounce;
+    }
+
+    &:active {
+        scale: 0.96;
+        transition: all 100ms ease-out;
+    }
+
+    @include mobile {
+        @include horizontalbp {
+            bottom: -8%;
+        }
+        @include verticalbp {
+            bottom: -4%;
+        }
+    }
+
+    @include tablet {
+        @include verticalbp {
+            bottom: -3%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            bottom: -4%;
+        }
+    }
+
+    @include laptop {
+        bottom: -5%;
+    }
+
+    @include desktop {
+        bottom: -3%;
+    }
+}
+
+.contact-heading-text {
+    font-weight: bold;
+
+    span {
+        color: $Green;
+    }
+
+    @include mobile {
+        font-size: 1.85rem;
+        line-height: normal;
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            font-size: 2.5rem;
+        }
+        font-size: 4rem;
+        @include verticalbp {
+            line-height: 150%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            font-size: 4rem;
+            line-height: 150%;
+        }
+    }
+
+    @include laptop {
+        font-size: 4rem;
+        line-height: 150%;
+    }
+
+    @include desktop {
+        font-size: 5rem;
+    }
+}
+
+.contact-line {
+    background-color: $Green;
+    height: 0.25rem;
+    width: 100%;
+    margin: 1.5rem 0;
+
+    @include mobile {
+        margin: 1rem 0;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            margin: 1.5rem 0;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin: 1.5rem 0;
+        }
+    }
+
+    @include laptop {
+        margin: 1.5rem 0;
+    }
+}
+
+.contact-sub-heading {
+    @include mobile {
+        margin-bottom: 0.5rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        @include horizontalbp {
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+        }
+        @include verticalbp {
+            h2 {
+                font-size: 1.65rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            h2 {
+                font-size: 1.75rem;
+                font-weight: 600;
+            }
+        }
+    }
+
+    @include laptop {
+        margin-bottom: 1rem;
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    @include desktop {
+        h2 {
+            font-size: 2.25rem;
+        }
+    }
+}
+
+.contact-content {
+    font-weight: 450;
+    
+    .emphasized {
+        color: $Green;
+        font-weight: 600;
+    }
+
+    @include mobile {
+        display: flex !important;
+        flex-direction: column;
+        gap: 1.125rem !important;
+        margin-top: 1.5rem !important;
+        font-size: 0.9rem !important;
+        @include horizontalbp {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            font-size: 0.85rem !important;
+        }
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            margin-top: 1.5rem !important;
+            font-size: 1rem !important;
+            gap: 1.25rem !important;
+        }
+        @include verticalbp {
+            display: flex !important;
+            flex-direction: column;
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            margin-top: 3rem !important;
+            font-size: 1.25rem !important;
+            gap: 1.125rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            margin-top: 3rem !important;
+            font-size: 1.25rem !important;
+            gap: 2rem !important;
+        }
+    }
+
+    @include laptop {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        margin-top: 3rem !important;
+        font-size: 1.25rem !important;
+        gap: 2rem !important;
+    }
+
+    @include desktop {
+        font-size: 1.5rem !important;
+    }
+}
+
+.contact-box {
+    @include mobile {
+        height: 90px;
+        padding-left: 0 !important;
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            height: 30%;
+            padding-left: 0 !important;
+        }
+        height: auto;
+        padding-left: 1rem !important;
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            height: auto;
+            padding-left: 0 !important;
+        }
+    }
+
+    @include laptop {
+        height: auto;
+        padding-left: 1rem !important;
+    }
+}
+
+.phone-content, .line-content, .linkedin-content, .email-content {
+    @include mobile {
+        @include verticalbp {
+            margin-left: 2rem !important;
+        }
+        @include horizontalbp {
+            margin-left: 2rem !important;
+        }
+    }
+
+    @include tablet {
+        @include horizontalbp {
+                margin-left: 0 !important;
+            }
+            margin-left: 2rem !important;
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin-left: 1rem !important;
+        }
+    }
+
+    @include laptop {
+        margin-left: 1rem !important;
+    }
+}
+
+.sign {
+    @include mobile {
+        scale: 0.55;
+        width: 15%;
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            scale: 0.75;
+            width: auto;
+        }
+        @include verticalbp {
+            scale: 1;
+            width: auto;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            scale: 1;
+            width: auto;
+            padding-left: 1rem;
+        }
+    }
+
+    @include laptop {
+        scale: 1;
+        width: auto;
+    }
+}
+
+@mixin hover-effect($color) {
+    &:hover {
+      color: $color;
+      font-weight: bold;
+      font-size: 97%;
+    }
+  }
+
+.linkedin-content a {
+    @include hover-effect(#0077B5);
+  }
+  
+  .phone-content a {
+    @include hover-effect($Green);
+  }
+  
+  .line-content a {
+    @include hover-effect(#06C755);
+  }
+  
+  .email-content a {
+    @include hover-effect($Blue);
+  }
+
+// .form-control label {
+//     left: 1%;
+//     font-size: 1rem;
+//     top: 25%;
+//     z-index: 30;
+//     transition: all 50ms ease-in;
+// }
+
+// .email-box {
+//     font-size: 14px;
+//     background-color: $White;
+//     overflow: hidden;
+
+//     &:focus {
+//         outline: 1px solid $Blue;
+
+//         + label {
+//             font-size: 0.9rem;
+//             font-weight: 600;
+//             top: -10%;
+//             color: $Blue;
+//             transition: all 80ms ease-in;
+
+//             + .email-content-line {
+//                 top: 12%;
+//             }
+//         }
+//     }
+// }
+
+// .email-content-line {
+//     left: 2%;
+//     top: 45%;
+//     width: 86px;
+//     height: 1px;
+//     background: rgba(253, 253, 253, 0.96);
+// }

@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.contact-close-icon {
+  fill: rgb(52, 199, 89);
+  position: absolute;
+  bottom: -4%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+.contact-close-icon:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 150ms ease-in;
+  animation: iconBounce2 150ms ease-out;
+  animation-delay: 140ms;
+}
+.contact-close-icon:active {
+  scale: 0.96;
+  transition: all 100ms ease-out;
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .contact-close-icon {
+    bottom: -8%;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  .contact-close-icon {
+    bottom: -4%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .contact-close-icon {
+    bottom: -3%;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-close-icon {
+    bottom: -4%;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-close-icon {
+    bottom: -5%;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-close-icon {
+    bottom: -3%;
+  }
+}
+
+.contact-heading-text {
+  font-weight: bold;
+}
+.contact-heading-text span {
+  color: rgb(52, 199, 89);
+}
+@media (min-width: 360px) {
+  .contact-heading-text {
+    font-size: 1.85rem;
+    line-height: normal;
+  }
+}
+@media (min-width: 768px) {
+  .contact-heading-text {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .contact-heading-text {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .contact-heading-text {
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-heading-text {
+    font-size: 4rem;
+    line-height: 150%;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-heading-text {
+    font-size: 4rem;
+    line-height: 150%;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-heading-text {
+    font-size: 5rem;
+  }
+}
+
+.contact-line {
+  background-color: rgb(52, 199, 89);
+  height: 0.25rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+@media (min-width: 360px) {
+  .contact-line {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .contact-line {
+    margin: 1.5rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-line {
+    margin: 1.5rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-line {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: 360px) {
+  .contact-sub-heading {
+    margin-bottom: 0.5rem;
+  }
+  .contact-sub-heading h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .contact-sub-heading h2 {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .contact-sub-heading h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .contact-sub-heading h2 {
+    font-size: 1.65rem;
+    font-weight: 600;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-sub-heading h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-sub-heading {
+    margin-bottom: 1rem;
+  }
+  .contact-sub-heading h2 {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-sub-heading h2 {
+    font-size: 2.25rem;
+  }
+}
+
+.contact-content {
+  font-weight: 450;
+}
+.contact-content .emphasized {
+  color: rgb(52, 199, 89);
+  font-weight: 600;
+}
+@media (min-width: 360px) {
+  .contact-content {
+    display: flex !important;
+    flex-direction: column;
+    gap: 1.125rem !important;
+    margin-top: 1.5rem !important;
+    font-size: 0.9rem !important;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .contact-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    font-size: 0.85rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .contact-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-top: 1.5rem !important;
+    font-size: 1rem !important;
+    gap: 1.25rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .contact-content {
+    display: flex !important;
+    flex-direction: column;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    margin-top: 3rem !important;
+    font-size: 1.25rem !important;
+    gap: 1.125rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-top: 3rem !important;
+    font-size: 1.25rem !important;
+    gap: 2rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-content {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    margin-top: 3rem !important;
+    font-size: 1.25rem !important;
+    gap: 2rem !important;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-content {
+    font-size: 1.5rem !important;
+  }
+}
+
+@media (min-width: 360px) {
+  .contact-box {
+    height: 90px;
+    padding-left: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+  .contact-box {
+    height: auto;
+    padding-left: 1rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .contact-box {
+    height: 30%;
+    padding-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .contact-box {
+    height: auto;
+    padding-left: 0 !important;
+  }
+}
+@media (min-width: 1280px) {
+  .contact-box {
+    height: auto;
+    padding-left: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 2rem !important;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 2rem !important;
+  }
+}
+@media (min-width: 768px) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 2rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 1rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .phone-content, .line-content, .linkedin-content, .email-content {
+    margin-left: 1rem !important;
+  }
+}
+
+@media (min-width: 360px) {
+  .sign {
+    scale: 0.55;
+    width: 15%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .sign {
+    scale: 0.75;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .sign {
+    scale: 1;
+    width: auto;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .sign {
+    scale: 1;
+    width: auto;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 1280px) {
+  .sign {
+    scale: 1;
+    width: auto;
+  }
+}
+
+.linkedin-content a:hover {
+  color: #0077B5;
+  font-weight: bold;
+  font-size: 97%;
+}
+
+.phone-content a:hover {
+  color: rgb(52, 199, 89);
+  font-weight: bold;
+  font-size: 97%;
+}
+
+.line-content a:hover {
+  color: #06C755;
+  font-weight: bold;
+  font-size: 97%;
+}
+
+.email-content a:hover {
+  color: rgb(0, 122, 255);
+  font-weight: bold;
+  font-size: 97%;
+}
+
+/*# sourceMappingURL=contact.css.map */

@@ -1,0 +1,561 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '../../scss/breakpoints.scss';
+
+$White: #fdfdfd;
+$Orange: rgb(255, 149, 0);
+$Green: rgb(52, 199, 89);
+$Cyan: rgb(50, 173, 230);
+$Blue: #007aff;
+$Indigo: rgb(88, 86, 214);
+$Gray: rgb(229, 229, 234);
+$Light-accent: rgb(58, 58, 60);
+
+@mixin icon-bounce {
+    cursor: pointer;
+    scale: (1.2);
+    transition: scale 150ms ease-in;
+    animation: iconBounce2 150ms ease-out;
+    animation-delay: 140ms;
+}
+
+.exp-close-icon {
+    fill: $Indigo;
+    position: absolute;
+    bottom: -4%;
+    right: 0;
+    left: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        @include icon-bounce;
+    }
+
+    &:active {
+        scale: 0.96;
+        transition: all 100ms ease-out;
+    }
+
+    @include mobile {
+        @include horizontalbp {
+            bottom: -8%;
+        }
+        @include verticalbp {
+            bottom: -4%;
+        }
+    }
+
+    @include tablet {
+        @include verticalbp {
+            bottom: -3%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            bottom: -4%;
+        }
+    }
+
+    @include laptop {
+        bottom: -5%;
+    }
+
+    @include desktop {
+        bottom: -3%;
+    }
+}
+
+.exp-heading-text {
+    font-size: 4rem;
+    font-weight: bold;
+
+    span {
+        color: $Indigo;
+    }
+
+    @include mobile {
+        font-size: 1.6rem;
+        line-height: normal;
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            font-size: 2.5rem;
+        }
+        font-size: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            font-size: 4rem;
+        }
+    }
+
+    @include laptop {
+        font-size: 4rem;
+        line-height: 150%;
+    }
+
+    @include desktop {
+        font-size: 5rem;
+    }
+}
+
+.exp-line {
+    background-color: $Indigo;
+    height: 0.25rem;
+    width: 100%;
+    margin: 1.5rem 0;
+
+    @include mobile {
+        margin: 1rem 0;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            margin: 1.5rem 0;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin: 1.5rem 0;
+        }
+    }
+
+    @include laptop {
+        margin: 1.5rem 0;
+    }
+}
+
+.exp-content {
+    display: inline-block;
+    font-weight: 450;
+
+    .emphasized {
+        color: $Indigo;
+        font-weight: 600;
+    }
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+}
+
+.exp-sub-heading {
+    font-size: 1.75rem;
+    color: $Indigo;
+    font-weight: 600;
+
+    .small {
+        font-style: italic;
+        font-size: 0.75rem;
+        color: gray;
+        font-weight: 500;
+    }
+
+    @include mobile {
+        font-size: 1.2rem;
+        line-height: normal;
+        margin-bottom: 0 !important;
+
+        .small {
+            font-size: 0.6rem;
+        }
+    }
+
+    @include mobile {
+        @include horizontalbp {
+            margin-bottom: 0.3rem !important;
+        }
+    }
+
+    @include tablet {
+        @include verticalbp {
+            font-size: 1.75rem;
+            margin-top: 0.75rem !important;
+            margin-bottom: 0.75rem !important;
+            line-height: 150%;
+
+            .small {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+            font-size: 1.75rem;
+            
+            h3 {
+                line-height: 150%;
+            }
+
+            .small {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    @include laptop {
+        margin-top: 0.5rem !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 1.75rem;
+
+        .small {
+            font-size: 0.75rem;
+        }
+    }
+
+    @include desktop {
+        font-size: 2rem;
+    }
+}
+
+.exp-project-pic {
+    border: 4px solid $Light-accent;
+    transition: all 120ms ease-out;
+    user-select: none;
+
+    &:hover {
+        scale: 1.04;
+        transition: all 120ms ease-in;
+    }
+
+    &:active {
+        scale: 0.98;
+        transition: all 120ms ease-in;
+    }
+
+    @include mobile {
+        width: 80%;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            width: auto;
+        }
+    }
+
+    @include laptop {
+        width: auto;
+    }
+}
+
+.custom-button {
+    background-color: $Indigo !important; 
+    color: $White !important;
+
+    @include mobile {
+        font-size: 0.5rem !important;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            font-size: 0.88rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            font-size: 0.88rem !important;
+        }
+    }
+
+    @include laptop {
+        font-size: 0.88rem !important;
+    }
+}
+
+.exp-content {
+    @include mobile {
+        @include verticalbp {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            gap: 0.5rem !important;
+        }
+        @include horizontalbp {
+            // grid-template-columns: repeat(2, minmax(0, fr)) !important;
+            display: flex !important;
+            height: 70%;
+            gap: 0.5rem !important;
+        }
+    }
+
+    @include tablet {
+        @include verticalbp {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+            gap: 0.5rem !important;
+        }
+        @include horizontalbp {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+            gap: 0.5rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+        }
+    }
+
+    @include laptop {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+        gap: 2.5rem !important;
+    }
+}
+
+.exp-skills {
+    width: 100%;
+    height: 100%;
+
+    @include mobile {
+        margin-top: 0 !important;
+        @include horizontalbp {
+            width: 50%;
+        }
+    }
+
+    @include tablet {
+        @include verticalbp {
+            height: 100% !important;
+            margin-top: 1rem !important;
+        }
+        // @include horizontalbp {
+        //     height: 80%;
+        // }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            height: 100% !important;
+            margin-top: 1rem !important;
+        }
+    }
+
+    @include laptop {
+        margin-top: 1rem !important;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.exp-main img {
+    scale: 1.0;
+}
+
+.exp-skills .skill {
+    @include mobile {
+        scale: 0.5;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            scale: 1;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            scale: 1;
+        }
+    }
+
+    @include laptop {
+        scale: 1;
+    }
+}
+
+.skill-icon {
+    @include mobile {
+        gap: 2px !important;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            gap: 1rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            gap: 1rem !important;
+        }
+    }
+
+    @include laptop {
+        gap: 1rem !important;
+        margin-top: 0.5rem;
+    }
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+
+    .html {
+        fill: #e34c26;
+    }
+
+    .css {
+        fill: #264ed4;
+    }
+
+    .js {
+        fill: #f7df1e;
+    }
+
+    .sass {
+        fill: #cc6699;
+    }
+
+    .tailwind {
+        fill: #06b6d4;
+    }
+
+    .bootstrap {
+        fill: #7a14f7;
+    }
+
+    .react {
+        fill: #68dcfc;
+    }
+
+    .vue {
+        fill: #41b883;
+    }
+
+    .node {
+        fill: #3c873a;
+    }
+
+    .postgre {
+        fill: #346493;
+    }
+
+    .firebase {
+        fill: #f5820d;
+    }
+
+    .python {
+        fill: #306998;
+        // height: 50px; For pic logo
+        // width: 50px; For pic logo
+    }
+
+    p {
+        @include mobile {
+            font-size: 0.44rem;
+            line-height: normal;
+        }
+
+        @include tablet {
+            @include verticalbp {
+                font-size: 0.88rem;
+                line-height: 150%;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            @include horizontalbp {
+                font-size: 0.75rem;
+                line-height: 150%;
+            }
+        }
+
+        @include laptop {
+            font-size: 0.88rem;
+            line-height: 150%;
+        }
+    }
+
+    @include mobile {
+            width: 35px;
+    }
+
+    @include tablet {
+        @include verticalbp {
+            width: 100%;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            width: 100%;
+        }
+    }
+
+    @include laptop {
+        width: 100%;
+    }
+}
+
+.skill-line {
+    background-color: $Gray;
+    height: 1.5px;
+    width: 100%;
+}
+
+.resume {
+    @include mobile {
+        margin-bottom: 0 !important;
+    }
+
+    @include tablet {
+        margin-top: 1rem !important;
+        @include verticalbp {
+            margin-top: 0.75rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin-top: 1rem !important;
+        }
+    }
+
+    @include laptop {
+        margin-top: 1rem !important;
+    }
+}
+
+.git-btn {
+    @include mobile {
+        @include horizontalbp {
+            margin-top: 12.5% !important;
+        }
+    }
+
+    @include tablet {
+        @include horizontalbp {
+            margin-top: -1% !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin-top: 0.5rem !important;
+        }
+    }
+
+    @include laptop {
+        margin-top: 0 !important;
+    }
+}

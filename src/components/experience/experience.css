@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.exp-close-icon {
+  fill: rgb(88, 86, 214);
+  position: absolute;
+  bottom: -4%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+.exp-close-icon:hover {
+  cursor: pointer;
+  scale: 1.2;
+  transition: scale 150ms ease-in;
+  animation: iconBounce2 150ms ease-out;
+  animation-delay: 140ms;
+}
+.exp-close-icon:active {
+  scale: 0.96;
+  transition: all 100ms ease-out;
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .exp-close-icon {
+    bottom: -8%;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  .exp-close-icon {
+    bottom: -4%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-close-icon {
+    bottom: -3%;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-close-icon {
+    bottom: -4%;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-close-icon {
+    bottom: -5%;
+  }
+}
+@media (min-width: 1920px) {
+  .exp-close-icon {
+    bottom: -3%;
+  }
+}
+
+.exp-heading-text {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.exp-heading-text span {
+  color: rgb(88, 86, 214);
+}
+@media (min-width: 360px) {
+  .exp-heading-text {
+    font-size: 1.6rem;
+    line-height: normal;
+  }
+}
+@media (min-width: 768px) {
+  .exp-heading-text {
+    font-size: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .exp-heading-text {
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-heading-text {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-heading-text {
+    font-size: 4rem;
+    line-height: 150%;
+  }
+}
+@media (min-width: 1920px) {
+  .exp-heading-text {
+    font-size: 5rem;
+  }
+}
+
+.exp-line {
+  background-color: rgb(88, 86, 214);
+  height: 0.25rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+@media (min-width: 360px) {
+  .exp-line {
+    margin: 1rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-line {
+    margin: 1.5rem 0;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-line {
+    margin: 1.5rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-line {
+    margin: 1.5rem 0;
+  }
+}
+
+.exp-content {
+  display: inline-block;
+  font-weight: 450;
+}
+.exp-content .emphasized {
+  color: rgb(88, 86, 214);
+  font-weight: 600;
+}
+.exp-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.exp-sub-heading {
+  font-size: 1.75rem;
+  color: rgb(88, 86, 214);
+  font-weight: 600;
+}
+.exp-sub-heading .small {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: gray;
+  font-weight: 500;
+}
+@media (min-width: 360px) {
+  .exp-sub-heading {
+    font-size: 1.2rem;
+    line-height: normal;
+    margin-bottom: 0 !important;
+  }
+  .exp-sub-heading .small {
+    font-size: 0.6rem;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .exp-sub-heading {
+    margin-bottom: 0.3rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-sub-heading {
+    font-size: 1.75rem;
+    margin-top: 0.75rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 150%;
+  }
+  .exp-sub-heading .small {
+    font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-sub-heading {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.75rem;
+  }
+  .exp-sub-heading h3 {
+    line-height: 150%;
+  }
+  .exp-sub-heading .small {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-sub-heading {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 1.75rem;
+  }
+  .exp-sub-heading .small {
+    font-size: 0.75rem;
+  }
+}
+@media (min-width: 1920px) {
+  .exp-sub-heading {
+    font-size: 2rem;
+  }
+}
+
+.exp-project-pic {
+  border: 4px solid rgb(58, 58, 60);
+  transition: all 120ms ease-out;
+  user-select: none;
+}
+.exp-project-pic:hover {
+  scale: 1.04;
+  transition: all 120ms ease-in;
+}
+.exp-project-pic:active {
+  scale: 0.98;
+  transition: all 120ms ease-in;
+}
+@media (min-width: 360px) {
+  .exp-project-pic {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-project-pic {
+    width: auto;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-project-pic {
+    width: auto;
+  }
+}
+
+.custom-button {
+  background-color: rgb(88, 86, 214) !important;
+  color: #fdfdfd !important;
+}
+@media (min-width: 360px) {
+  .custom-button {
+    font-size: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+
+@media only screen and (min-width: 360px) and (orientation: portrait) {
+  .exp-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .exp-content {
+    display: flex !important;
+    height: 70%;
+    gap: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-content {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .exp-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+    gap: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
+    gap: 2.5rem !important;
+  }
+}
+
+.exp-skills {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 360px) {
+  .exp-skills {
+    margin-top: 0 !important;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .exp-skills {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-skills {
+    height: 100% !important;
+    margin-top: 1rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-skills {
+    height: 100% !important;
+    margin-top: 1rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-skills {
+    margin-top: 1rem !important;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.exp-main img {
+  scale: 1;
+}
+
+@media (min-width: 360px) {
+  .exp-skills .skill {
+    scale: 0.5;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-skills .skill {
+    scale: 1;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .exp-skills .skill {
+    scale: 1;
+  }
+}
+@media (min-width: 1280px) {
+  .exp-skills .skill {
+    scale: 1;
+  }
+}
+
+@media (min-width: 360px) {
+  .skill-icon {
+    gap: 2px !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .skill-icon {
+    gap: 1rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .skill-icon {
+    gap: 1rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .skill-icon {
+    gap: 1rem !important;
+    margin-top: 0.5rem;
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+}
+.skills .html {
+  fill: #e34c26;
+}
+.skills .css {
+  fill: #264ed4;
+}
+.skills .js {
+  fill: #f7df1e;
+}
+.skills .sass {
+  fill: #cc6699;
+}
+.skills .tailwind {
+  fill: #06b6d4;
+}
+.skills .bootstrap {
+  fill: #7a14f7;
+}
+.skills .react {
+  fill: #68dcfc;
+}
+.skills .vue {
+  fill: #41b883;
+}
+.skills .node {
+  fill: #3c873a;
+}
+.skills .postgre {
+  fill: #346493;
+}
+.skills .firebase {
+  fill: #f5820d;
+}
+.skills .python {
+  fill: #306998;
+}
+@media (min-width: 360px) {
+  .skills p {
+    font-size: 0.44rem;
+    line-height: normal;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .skills p {
+    font-size: 0.88rem;
+    line-height: 150%;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .skills p {
+    font-size: 0.75rem;
+    line-height: 150%;
+  }
+}
+@media (min-width: 1280px) {
+  .skills p {
+    font-size: 0.88rem;
+    line-height: 150%;
+  }
+}
+@media (min-width: 360px) {
+  .skills {
+    width: 35px;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .skills {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .skills {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .skills {
+    width: 100%;
+  }
+}
+
+.skill-line {
+  background-color: rgb(229, 229, 234);
+  height: 1.5px;
+  width: 100%;
+}
+
+@media (min-width: 360px) {
+  .resume {
+    margin-bottom: 0 !important;
+  }
+}
+@media (min-width: 768px) {
+  .resume {
+    margin-top: 1rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .resume {
+    margin-top: 0.75rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .resume {
+    margin-top: 1rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .resume {
+    margin-top: 1rem !important;
+  }
+}
+
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: 12.5% !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: -1% !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: 0.5rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .git-btn {
+    margin-top: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=experience.css.map */
