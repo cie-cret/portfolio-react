@@ -480,6 +480,7 @@
 .custom-button {
   background-color: rgb(88, 86, 214) !important;
   color: #fdfdfd !important;
+  transition: all 120ms ease-in;
 }
 .custom-button:hover {
   scale: 1.04;

@@ -516,6 +516,7 @@ $Light-accent: rgb(58, 58, 60);
 .custom-button {
     background-color: $Indigo !important; 
     color: $White !important;
+    transition: all 120ms ease-in;
 
     &:hover {
         scale: 1.04;
