@@ -1,4 +1,4 @@
-import "./about.scss";
+import "./about.css";
 import { IoCloseCircle } from "react-icons/io5";
 
 const AboutPage: React.FC<AboutPageProps> = ({ setSlidePopup }) => {

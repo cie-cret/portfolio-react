@@ -1,5 +1,5 @@
 // Components
-import "./contact.scss";
+import "./contact.css";
 
 // Icons
 import { IoCloseCircle } from "react-icons/io5";

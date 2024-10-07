@@ -24,16 +24,35 @@ img {
 @media (min-width: 360px) {
   .container {
     padding: 1.5rem 2.5rem;
+    height: 75vh;
+    position: absolute;
+    top: 10%;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .container {
     padding: 3rem 5rem;
+    position: absolute;
+    top: 10%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .container {
+    position: absolute;
+    top: 10%;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .container {
     padding: 3rem 5rem;
+    position: absolute;
+    top: 10%;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    height: 80vh;
+    position: fixed;
   }
 }
 
@@ -63,7 +82,7 @@ img {
   scale: 1;
   transition: all 100ms ease-in;
   animation: bounce 150ms ease-in;
-  animation-delay: 80ms;
+  animation-delay: 100ms;
 }
 .profile-pic.active + .mini-nav .icon {
   opacity: 1;

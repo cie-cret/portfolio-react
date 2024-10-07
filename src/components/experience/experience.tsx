@@ -1,4 +1,4 @@
-import "./experience.scss";
+import "./experience.css";
 
 // Icons
 import { IoCloseCircle } from "react-icons/io5";

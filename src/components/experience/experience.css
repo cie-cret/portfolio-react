@@ -25,12 +25,12 @@
 }
 @media only screen and (min-width: 360px) and (orientation: landscape) {
   .exp-close-icon {
-    bottom: -8%;
+    bottom: -9%;
   }
 }
 @media only screen and (min-width: 360px) and (orientation: portrait) {
   .exp-close-icon {
-    bottom: -4%;
+    bottom: -5%;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
@@ -74,7 +74,7 @@
 }
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .exp-heading-text {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
@@ -102,7 +102,7 @@
 }
 @media (min-width: 360px) {
   .exp-line {
-    margin: 1rem 0;
+    margin: 0.75rem 0;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
@@ -147,12 +147,12 @@
 }
 @media (min-width: 360px) {
   .exp-sub-heading {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: normal;
     margin-bottom: 0 !important;
   }
   .exp-sub-heading .small {
-    font-size: 0.6rem;
+    font-size: 0.5rem;
   }
 }
 @media only screen and (min-width: 360px) and (orientation: landscape) {
@@ -163,12 +163,21 @@
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .exp-sub-heading {
     font-size: 1.75rem;
-    margin-top: 0.75rem !important;
-    margin-bottom: 0.75rem !important;
-    line-height: 150%;
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .exp-sub-heading .small {
     font-size: 0.75rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .exp-sub-heading {
+    font-size: 1.25rem;
+    margin-top: 0.2rem !important;
+    margin-bottom: 0.2rem !important;
+  }
+  .exp-sub-heading .small {
+    font-size: 0.55rem;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
@@ -189,6 +198,7 @@
     margin-top: 0.5rem !important;
     margin-bottom: 0.5rem !important;
     font-size: 1.75rem;
+    line-height: 150%;
   }
   .exp-sub-heading .small {
     font-size: 0.75rem;
@@ -215,10 +225,25 @@
 }
 @media (min-width: 360px) {
   .exp-project-pic {
-    width: 80%;
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .exp-project-pic {
+    width: 90%;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
+  .exp-project-pic {
+    width: 50%;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .exp-project-pic {
+    width: 75%;
+  }
+}
+@media only screen and (min-width: 820px) and (orientation: portrait) {
   .exp-project-pic {
     width: auto;
   }
@@ -307,7 +332,7 @@
 }
 @media only screen and (min-width: 360px) and (orientation: landscape) {
   .exp-skills {
-    width: 50%;
+    width: 49.25%;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
@@ -341,12 +366,17 @@
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .exp-skills .skill {
-    scale: 1;
+    scale: 0.8;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .exp-skills .skill {
+    scale: 0.66;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .exp-skills .skill {
-    scale: 1;
+    scale: 0.8;
   }
 }
 @media (min-width: 1280px) {
@@ -424,13 +454,13 @@
 @media (min-width: 360px) {
   .skills p {
     font-size: 0.44rem;
-    line-height: normal;
+    line-height: 110%;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   .skills p {
     font-size: 0.88rem;
-    line-height: 150%;
+    line-height: 110%;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
@@ -472,9 +502,13 @@
   width: 100%;
 }
 
+.resume {
+  font-weight: 600;
+}
 @media (min-width: 360px) {
   .resume {
     margin-bottom: 0 !important;
+    margin-top: 0.5rem !important;
   }
 }
 @media (min-width: 768px) {
@@ -498,19 +532,22 @@
   }
 }
 
+.git-btn {
+  font-weight: 600;
+}
 @media only screen and (min-width: 360px) and (orientation: landscape) {
   .git-btn {
-    margin-top: 12.5% !important;
+    margin-top: 1% !important;
   }
 }
 @media only screen and (min-width: 768px) and (orientation: landscape) {
   .git-btn {
-    margin-top: -1% !important;
+    margin-top: 1% !important;
   }
 }
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
   .git-btn {
-    margin-top: 0.5rem !important;
+    margin-top: 5% !important;
   }
 }
 @media (min-width: 1280px) {
