@@ -254,31 +254,6 @@
   }
 }
 
-.custom-button {
-  background-color: rgb(88, 86, 214) !important;
-  color: #fdfdfd !important;
-}
-@media (min-width: 360px) {
-  .custom-button {
-    font-size: 0.5rem !important;
-  }
-}
-@media only screen and (min-width: 768px) and (orientation: portrait) {
-  .custom-button {
-    font-size: 0.88rem !important;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .custom-button {
-    font-size: 0.88rem !important;
-  }
-}
-@media (min-width: 1280px) {
-  .custom-button {
-    font-size: 0.88rem !important;
-  }
-}
-
 @media only screen and (min-width: 360px) and (orientation: portrait) {
   .exp-content {
     display: grid;
@@ -502,6 +477,63 @@
   width: 100%;
 }
 
+.custom-button {
+  background-color: rgb(88, 86, 214) !important;
+  color: #fdfdfd !important;
+}
+.custom-button:hover {
+  scale: 1.04;
+  transition: all 120ms ease-in;
+}
+.custom-button:active {
+  scale: 0.98;
+  transition: all 120ms ease-in;
+}
+@media (min-width: 360px) {
+  .custom-button {
+    font-size: 0.5rem !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+@media (min-width: 1280px) {
+  .custom-button {
+    font-size: 0.88rem !important;
+  }
+}
+
+.git-btn {
+  font-weight: 600;
+}
+@media only screen and (min-width: 360px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: 1% !important;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: 1% !important;
+  }
+}
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+  .git-btn {
+    margin-top: 5% !important;
+  }
+}
+@media (min-width: 1280px) {
+  .git-btn {
+    margin-top: 0 !important;
+  }
+}
+
 .resume {
   font-weight: 600;
 }
@@ -529,30 +561,6 @@
 @media (min-width: 1280px) {
   .resume {
     margin-top: 1rem !important;
-  }
-}
-
-.git-btn {
-  font-weight: 600;
-}
-@media only screen and (min-width: 360px) and (orientation: landscape) {
-  .git-btn {
-    margin-top: 1% !important;
-  }
-}
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-  .git-btn {
-    margin-top: 1% !important;
-  }
-}
-@media only screen and (min-width: 1024px) and (orientation: landscape) {
-  .git-btn {
-    margin-top: 5% !important;
-  }
-}
-@media (min-width: 1280px) {
-  .git-btn {
-    margin-top: 0 !important;
   }
 }
 

@@ -273,31 +273,6 @@ $Light-accent: rgb(58, 58, 60);
     }
 }
 
-.custom-button {
-    background-color: $Indigo !important; 
-    color: $White !important;
-
-    @include mobile {
-        font-size: 0.5rem !important;
-    }
-
-    @include tablet {
-        @include verticalbp {
-            font-size: 0.88rem !important;
-        }
-    }
-
-    @media (min-width: 1024px) {
-        @include horizontalbp {
-            font-size: 0.88rem !important;
-        }
-    }
-
-    @include laptop {
-        font-size: 0.88rem !important;
-    }
-}
-
 .exp-content {
     @include mobile {
         @include verticalbp {
@@ -538,29 +513,38 @@ $Light-accent: rgb(58, 58, 60);
     width: 100%;
 }
 
-.resume {
-    font-weight: 600;
+.custom-button {
+    background-color: $Indigo !important; 
+    color: $White !important;
+
+    &:hover {
+        scale: 1.04;
+        transition: all 120ms ease-in;
+    }
+
+    &:active {
+        scale: 0.98;
+        transition: all 120ms ease-in;
+    }
 
     @include mobile {
-        margin-bottom: 0 !important;
-        margin-top: 0.5rem !important;
+        font-size: 0.5rem !important;
     }
 
     @include tablet {
-        margin-top: 1rem !important;
         @include verticalbp {
-            margin-top: 0.75rem !important;
+            font-size: 0.88rem !important;
         }
     }
 
     @media (min-width: 1024px) {
         @include horizontalbp {
-            margin-top: 1rem !important;
+            font-size: 0.88rem !important;
         }
     }
 
     @include laptop {
-        margin-top: 1rem !important;
+        font-size: 0.88rem !important;
     }
 }
 
@@ -587,5 +571,31 @@ $Light-accent: rgb(58, 58, 60);
 
     @include laptop {
         margin-top: 0 !important;
+    }
+}
+
+.resume {
+    font-weight: 600;
+
+    @include mobile {
+        margin-bottom: 0 !important;
+        margin-top: 0.5rem !important;
+    }
+
+    @include tablet {
+        margin-top: 1rem !important;
+        @include verticalbp {
+            margin-top: 0.75rem !important;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        @include horizontalbp {
+            margin-top: 1rem !important;
+        }
+    }
+
+    @include laptop {
+        margin-top: 1rem !important;
     }
 }
