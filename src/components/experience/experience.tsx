@@ -46,7 +46,7 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
             </div>
             <div className="exp-project card justify-center items-center">
               <div className="exp-project-pic m-2 cursor-pointer rounded">
-                <a href="#" target="_blank">
+                <a href="https://test-y2kthshop.netlify.app/" target="_blank">
                   <img
                     src="/project/Y2K_TH_Project.jpg"
                     alt="project"
@@ -57,7 +57,7 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
               </div>
               {/* Detail */}
               <div className="git-btn custom-button btn btn-sm btn-ghost px-6 rounded-3xl hover:scale-105">
-                <a href="#" target="_blank">
+                <a href="https://github.com/cie-cret/y2kth" target="_blank">
                   <p>Github (Frontend)</p>
                 </a>
               </div>
