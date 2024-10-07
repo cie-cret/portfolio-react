@@ -43,10 +43,10 @@ $Light-accent: rgb(58, 58, 60);
 
     @include mobile {
         @include horizontalbp {
-            bottom: -8%;
+            bottom: -9%;
         }
         @include verticalbp {
-            bottom: -4%;
+            bottom: -5%;
         }
     }
 
@@ -139,8 +139,6 @@ $Light-accent: rgb(58, 58, 60);
 
 .contact-sub-heading {
     @include mobile {
-        margin-bottom: 0.5rem;
-
         h2 {
             font-size: 1.5rem;
             font-weight: 600;
@@ -154,6 +152,7 @@ $Light-accent: rgb(58, 58, 60);
     }
 
     @include tablet {
+        margin-bottom: 0.5rem;
         @include horizontalbp {
             h2 {
                 font-size: 1.5rem;
@@ -257,17 +256,26 @@ $Light-accent: rgb(58, 58, 60);
 
 .contact-box {
     @include mobile {
-        height: 90px;
+        height: 80px;
         padding-left: 0 !important;
+        @include horizontalbp {
+            height: 70px;
+        }
     }
 
     @include tablet {
         @include horizontalbp {
-            height: 30%;
+            height: 25%;
             padding-left: 0 !important;
         }
-        height: auto;
+        height: 110px;
         padding-left: 1rem !important;
+    }
+
+    @media (min-width: 820px) {
+        @include verticalbp {
+            height: 100%;
+        }
     }
 
     @media (min-width: 1024px) {
@@ -319,7 +327,7 @@ $Light-accent: rgb(58, 58, 60);
 
     @include tablet {
         @include horizontalbp {
-            scale: 0.75;
+            scale: 0.65;
             width: auto;
         }
         @include verticalbp {
@@ -365,41 +373,3 @@ $Light-accent: rgb(58, 58, 60);
   .email-content a {
     @include hover-effect($Blue);
   }
-
-// .form-control label {
-//     left: 1%;
-//     font-size: 1rem;
-//     top: 25%;
-//     z-index: 30;
-//     transition: all 50ms ease-in;
-// }
-
-// .email-box {
-//     font-size: 14px;
-//     background-color: $White;
-//     overflow: hidden;
-
-//     &:focus {
-//         outline: 1px solid $Blue;
-
-//         + label {
-//             font-size: 0.9rem;
-//             font-weight: 600;
-//             top: -10%;
-//             color: $Blue;
-//             transition: all 80ms ease-in;
-
-//             + .email-content-line {
-//                 top: 12%;
-//             }
-//         }
-//     }
-// }
-
-// .email-content-line {
-//     left: 2%;
-//     top: 45%;
-//     width: 86px;
-//     height: 1px;
-//     background: rgba(253, 253, 253, 0.96);
-// }

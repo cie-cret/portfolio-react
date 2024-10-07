@@ -29,18 +29,34 @@ img {
 
   @include mobile {
     padding: 1.5rem 2.5rem;
+    height: 75vh;
+    position: absolute;
+    top: 10%;
   }
 
   @include tablet {
     @include verticalbp {
       padding: 3rem 5rem;
+      position: absolute;
+      top: 10%;
+    }
+    @include horizontalbp {
+      position: absolute;
+      top: 10%;
     }
   }
 
   @media (min-width: 1024px) {
     @include horizontalbp {
       padding: 3rem 5rem;
+      position: absolute;
+      top: 10%;
     }
+  }
+
+  @include laptop {
+    height: 80vh;
+    position: fixed;
   }
 }
 
@@ -75,7 +91,7 @@ img {
       scale: (1);
       transition: all 100ms ease-in;
       animation: bounce 150ms ease-in;
-      animation-delay: 80ms;
+      animation-delay: 100ms;
     }
 
     + .mini-nav .icon {

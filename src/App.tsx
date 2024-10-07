@@ -2,7 +2,8 @@
 import { useState, useEffect } from "react";
 
 // Components
-import "./App.css";
+// import "./App.css";
+import "./scss/App.scss";
 import AboutPage from "./components/about/about";
 import ExperiencePage from "./components/experience/experience";
 import ContactPage from "./components/contact/contact";

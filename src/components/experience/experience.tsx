@@ -1,4 +1,4 @@
-import "./experience.css";
+import "./experience.scss";
 
 // Icons
 import { IoCloseCircle } from "react-icons/io5";
@@ -56,7 +56,7 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
                 </a>
               </div>
               {/* Detail */}
-              <div className="git-btn custom-button btn btn-sm btn-ghost px-6 rounded-3xl hover:scale-105">
+              <div className="git-btn custom-button px-4 py-1 rounded-3xl hover:scale-105">
                 <a href="https://github.com/cie-cret/y2kth" target="_blank">
                   <p>Github (Frontend)</p>
                 </a>
@@ -136,7 +136,7 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
                 </div>
               </div>
             </div>
-            <div className="resume custom-button btn btn-sm btn-ghost px-6 mt-4 mb-2 rounded-3xl hover:scale-105">
+            <div className="resume custom-button px-4 py-1 mt-4 mb-2 rounded-3xl hover:scale-105">
               <a
                 href="https://www.canva.com/design/DAGQYmGUO0o/ieN1r3mi5DeK9Ss_0tcXvw/view?utm_content=DAGQYmGUO0o&utm_campaign=designshare&utm_medium=link&utm_source=editor"
                 target="_blank"

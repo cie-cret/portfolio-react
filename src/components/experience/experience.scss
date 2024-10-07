@@ -43,10 +43,10 @@ $Light-accent: rgb(58, 58, 60);
 
     @include mobile {
         @include horizontalbp {
-            bottom: -8%;
+            bottom: -9%;
         }
         @include verticalbp {
-            bottom: -4%;
+            bottom: -5%;
         }
     }
 
@@ -86,7 +86,7 @@ $Light-accent: rgb(58, 58, 60);
 
     @include tablet {
         @include horizontalbp {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
         font-size: 3rem;
     }
@@ -114,7 +114,7 @@ $Light-accent: rgb(58, 58, 60);
     margin: 1.5rem 0;
 
     @include mobile {
-        margin: 1rem 0;
+        margin: 0.75rem 0;
     }
 
     @include tablet {
@@ -162,12 +162,12 @@ $Light-accent: rgb(58, 58, 60);
     }
 
     @include mobile {
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: normal;
         margin-bottom: 0 !important;
 
         .small {
-            font-size: 0.6rem;
+            font-size: 0.5rem;
         }
     }
 
@@ -180,12 +180,21 @@ $Light-accent: rgb(58, 58, 60);
     @include tablet {
         @include verticalbp {
             font-size: 1.75rem;
-            margin-top: 0.75rem !important;
-            margin-bottom: 0.75rem !important;
-            line-height: 150%;
+            margin-top: 0.5rem !important;
+            margin-bottom: 0.5rem !important;
+
 
             .small {
                 font-size: 0.75rem;
+            }
+        }
+        @include horizontalbp {
+            font-size: 1.25rem;
+            margin-top: 0.2rem !important;
+            margin-bottom: 0.2rem !important;
+
+            .small {
+                font-size: 0.55rem;
             }
         }
     }
@@ -210,6 +219,7 @@ $Light-accent: rgb(58, 58, 60);
         margin-top: 0.5rem !important;
         margin-bottom: 0.5rem !important;
         font-size: 1.75rem;
+        line-height: 150%;
 
         .small {
             font-size: 0.75rem;
@@ -237,10 +247,22 @@ $Light-accent: rgb(58, 58, 60);
     }
 
     @include mobile {
-        width: 80%;
+        width: 75%;
+        @include horizontalbp {
+            width: 90%;
+        }
     }
 
     @include tablet {
+        @include verticalbp {
+            width: 50%;
+        }
+        @include horizontalbp {
+            width: 75%;
+        }
+    }
+
+    @media (min-width: 820px) {
         @include verticalbp {
             width: auto;
         }
@@ -325,7 +347,7 @@ $Light-accent: rgb(58, 58, 60);
     @include mobile {
         margin-top: 0 !important;
         @include horizontalbp {
-            width: 50%;
+                width: 49.25%;
         }
     }
 
@@ -364,13 +386,16 @@ $Light-accent: rgb(58, 58, 60);
 
     @include tablet {
         @include verticalbp {
-            scale: 1;
+            scale: 0.8;
+        }
+        @include horizontalbp {
+            scale: 0.66;
         }
     }
 
     @media (min-width: 1024px) {
         @include horizontalbp {
-            scale: 1;
+            scale: 0.8;
         }
     }
 
@@ -463,13 +488,13 @@ $Light-accent: rgb(58, 58, 60);
     p {
         @include mobile {
             font-size: 0.44rem;
-            line-height: normal;
+            line-height: 110%;
         }
 
         @include tablet {
             @include verticalbp {
                 font-size: 0.88rem;
-                line-height: 150%;
+                line-height: 110%;
             }
         }
 
@@ -514,8 +539,11 @@ $Light-accent: rgb(58, 58, 60);
 }
 
 .resume {
+    font-weight: 600;
+
     @include mobile {
         margin-bottom: 0 !important;
+        margin-top: 0.5rem !important;
     }
 
     @include tablet {
@@ -537,21 +565,23 @@ $Light-accent: rgb(58, 58, 60);
 }
 
 .git-btn {
+    font-weight: 600;
+
     @include mobile {
         @include horizontalbp {
-            margin-top: 12.5% !important;
+            margin-top: 1% !important;
         }
     }
 
     @include tablet {
         @include horizontalbp {
-            margin-top: -1% !important;
+            margin-top: 1% !important;
         }
     }
 
     @media (min-width: 1024px) {
         @include horizontalbp {
-            margin-top: 0.5rem !important;
+            margin-top: 5% !important;
         }
     }
 

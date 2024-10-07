@@ -43,10 +43,10 @@ $Light-accent: rgb(58, 58, 60);
 
     @include mobile {
         @include horizontalbp {
-            bottom: -8%;
+            bottom: -9%;
         }
         @include verticalbp {
-            bottom: -4%;
+            bottom: -5%;
         }
     }
 
@@ -204,6 +204,17 @@ $Light-accent: rgb(58, 58, 60);
     }
 
     @include tablet {
+        @include verticalbp {
+            display: inline-block;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 84%;
+            scale: 0.8;
+        }
+    }
+
+    @media (min-width: 820px) {
         @include verticalbp {
             display: inline-block;
             margin: auto;
