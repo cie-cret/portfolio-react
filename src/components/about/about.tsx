@@ -32,9 +32,12 @@ const AboutPage: React.FC<AboutPageProps> = ({ setSlidePopup }) => {
               <br />
               <span className="small">(but still unemployement 😭)</span>
               <br />
-              <br />I didn't graduate from a related field, nor science-math
-              class, {/* <br /> */}
-              but I do know I'm interested in coding, programming, and tech.
+              <br />
+              I'm so passionate about coding, programming, technology,{" "}
+              {/* <br /> */}
+              and especially user interface for now. Although I didn't graduate
+              from computer science, I literally want to grow in this career
+              path
               <br />
               <br />
               If you're reading this and wondering what changes my mind,{" "}

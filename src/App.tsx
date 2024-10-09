@@ -28,7 +28,7 @@ function App() {
   // Popup Page
   const openPage = (e: React.MouseEvent<HTMLButtonElement>) => {
     const buttonID = (e.target as HTMLDivElement).id;
-    console.log(typeof e.target);
+    // console.log(typeof e.target);
 
     if (buttonID === "about") {
       setSlidePopup("about");
