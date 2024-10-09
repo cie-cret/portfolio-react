@@ -41,7 +41,7 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
             <div className="exp-sub-heading my-2">
               <h3>
                 Y2K Shop
-                <span className="small ml-1"> ~ 60% completed</span>
+                <span className="small ml-1"> ~ 70% completed</span>
               </h3>
             </div>
             <div className="exp-project card justify-center items-center">
