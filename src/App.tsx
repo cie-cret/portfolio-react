@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 
 // Components
 import "./App.css";
-import AboutPage from "./components/about/about";
-import ExperiencePage from "./components/experience/experience";
-import ContactPage from "./components/contact/contact";
+// import "./scss/App.scss";
+import AboutPage from "./_components/about/about";
+import ExperiencePage from "./_components/experience/experience";
+import ContactPage from "./_components/contact/contact";
 
 // Icons
 // import { FaAddressCard } from "react-icons/fa";

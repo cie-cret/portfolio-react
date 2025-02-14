@@ -396,8 +396,11 @@
 .skills .css {
   fill: #264ed4;
 }
-.skills .js {
+/* .skills .js {
   fill: #f7df1e;
+} */
+.skills .ts {
+  fill: #3178c6;
 }
 .skills .sass {
   fill: #cc6699;

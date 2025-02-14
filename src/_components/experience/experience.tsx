@@ -1,10 +1,20 @@
-import "./experience.css";
+import { useState } from "react";
+
+import "./experience.scss";
+import "swiper/css";
+import "swiper/css/navigation";
+
+import Project from "../project/project";
 
 // Icons
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+
 import { IoCloseCircle } from "react-icons/io5";
 import { FaHtml5 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
-import { IoLogoJavascript } from "react-icons/io5";
+// import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
 import { FaSass } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaBootstrap } from "react-icons/fa";
@@ -25,6 +35,8 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
     }, 300);
   };
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <div className="container glass">
       <div className="exp-main relative">
@@ -37,32 +49,37 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
         <div className="exp-line"></div>
         <div className="exp-content grid grid-cols-2 items-center gap-10 px-4">
           {/* Project */}
-          <div className="exp-skills glass rounded-lg px-4 py-2 flex flex-col mt-4">
-            <div className="exp-sub-heading my-2">
-              <h3>
-                Y2K Shop
-                <span className="small ml-1"> ~ 70% completed</span>
-              </h3>
-            </div>
-            <div className="exp-project card justify-center items-center">
-              <div className="exp-project-pic m-2 cursor-pointer rounded">
-                <a href="https://test-y2kthshop.netlify.app/" target="_blank">
-                  <img
-                    src="/project/Y2K_TH_Project.jpg"
-                    alt="project"
-                    width={350}
-                    height={197}
-                  />
-                </a>
-              </div>
-              {/* Detail */}
-              <div className="git-btn custom-button px-4 py-1 rounded-3xl hover:scale-105">
-                <a href="https://github.com/cie-cret/y2kth" target="_blank">
-                  <p>Github (Frontend)</p>
-                </a>
-              </div>
-            </div>
-          </div>
+          <Swiper
+            navigation={true}
+            modules={[Navigation]}
+            className="exp-skills glass rounded-lg px-4 py-2 mt-4"
+            onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+          >
+            <SwiperSlide
+              className={`swiper ${activeIndex !== 0 ? "custom-swiper" : ""}`}
+            >
+              <Project
+                name="Pokémon"
+                image="/project/Pokemon_API.jpg"
+                img_alt="Pokémon Project"
+                website="https://cie-cret-pokeapi.netlify.app/"
+                repo="https://github.com/cie-cret/pokemon-api"
+              />
+            </SwiperSlide>
+            <SwiperSlide
+              className={`swiper ${activeIndex !== 1 ? "custom-swiper" : ""}`}
+            >
+              <Project
+                name="Y2K Shop"
+                description="~ 70% completed"
+                image="/project/Y2K_TH_Project.jpg"
+                img_alt="Y2K Project"
+                website="https://test-y2kthshop.netlify.app/"
+                repo="https://github.com/cie-cret/y2kth"
+              />
+            </SwiperSlide>
+          </Swiper>
+
           {/* Skills */}
           <div className="exp-skills glass rounded-lg px-4 py-2 flex flex-col items-center mt-4">
             <div className="flex flex-col w-full">
@@ -81,9 +98,9 @@ const ExperiencePage: React.FC<ExpPageProps> = ({ setSlidePopup }) => {
                     <IoLogoCss3 className="skill css" size={50} />
                     <p>CSS</p>
                   </div>
-                  <div className="skills js">
-                    <IoLogoJavascript className="skill js" size={50} />
-                    <p>JS</p>
+                  <div className="skills ts">
+                    <SiTypescript className="skill ts" size={50} />
+                    <p>TS</p>
                   </div>
                   <div className="divider divider-horizontal m-0"></div>
                   <div className="skills sass">

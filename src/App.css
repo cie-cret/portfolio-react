@@ -63,6 +63,8 @@ img {
 .profile-pic {
   outline: 8px solid rgb(0, 122, 255);
   scale: 1;
+  animation: profileBounce 200ms ease-in;
+  animation-delay: 100ms;
   transition: all 200ms ease-in;
 }
 .profile-pic:hover + .mini-nav {
@@ -76,6 +78,8 @@ img {
 .profile-pic.active {
   scale: 0.93;
   outline: 6px solid rgb(0, 122, 255);
+  animation: profileBounce2 170ms ease-in;
+  animation-delay: 100ms;
   transition: all 100ms ease-in;
 }
 .profile-pic.active + .mini-nav {
@@ -225,6 +229,19 @@ button #about:active, button #experience:active, button #contact:active {
     scale: 1.2;
   }
 }
+
+@keyframes profileBounce {
+  20% {scale: 1.05;}
+  60% {scale: 0.96;}
+  100% {scale: 1;}
+}
+
+@keyframes profileBounce2 {
+  20% {scale: 0.88;}
+  60% {scale: 0.98;}
+  100% {scale: 0.93;}
+}
+
 @keyframes dropTop {
   0% {
     transform: translateY(-100%);

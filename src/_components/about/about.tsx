@@ -1,4 +1,4 @@
-import "./about.css";
+import "./about.scss";
 import { IoCloseCircle } from "react-icons/io5";
 
 const AboutPage: React.FC<AboutPageProps> = ({ setSlidePopup }) => {
@@ -28,7 +28,7 @@ const AboutPage: React.FC<AboutPageProps> = ({ setSlidePopup }) => {
               Hi! I'm <span className="emphasized">Chaipat</span>, or you can
               call me <span className="emphasized">Cie</span> (like an alphabet
               C). {/* <br /> */}
-              Currently, being a 26 year-old (front-end) web developer-to-be
+              Currently, being a 27 year-old (front-end) web developer-to-be
               <br />
               <span className="small">(but still unemployement 😭)</span>
               <br />

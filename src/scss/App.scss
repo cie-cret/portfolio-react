@@ -67,6 +67,8 @@ img {
 .profile-pic {
   outline: 8px solid $Blue;
   scale: 1;
+  animation: profileBounce 200ms ease-in;
+  animation-delay: 100ms;
   transition: all 200ms ease-in;
 
   &:hover {
@@ -85,6 +87,8 @@ img {
   &.active {
     scale: 0.93;
     outline: 6px solid $Blue;
+    animation: profileBounce2 170ms ease-in;
+    animation-delay: 100ms;
     transition: all 100ms ease-in;
 
     + .mini-nav {
@@ -243,6 +247,18 @@ button #about, button #experience, button #contact {
 @keyframes iconBounce2 {
   50% {scale: (1.4);}
   100% {scale: (1.2);}
+}
+
+@keyframes profileBounce {
+  20% {scale: (1.05);}
+  60% {scale: (0.96);}
+  100% {scale: (1);}
+}
+
+@keyframes profileBounce2 {
+  20% {scale: (0.88);}
+  60% {scale: (0.98);}
+  100% {scale: (0.93);}
 }
 
 @keyframes dropTop {

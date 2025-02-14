@@ -4,6 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import '../../scss/breakpoints.scss';
+@import 'swiper/css';
 
 $White: #fdfdfd;
 $Orange: rgb(255, 149, 0);
@@ -21,6 +22,72 @@ $Light-accent: rgb(58, 58, 60);
     animation: iconBounce2 150ms ease-out;
     animation-delay: 140ms;
 }
+
+.swiper-button-prev, .swiper-button-next {
+    color: $Indigo !important;
+}
+
+// .swiper-button-prev {
+//     @include mobile {
+//         @include horizontalbp {
+//             margin-left: -3%;
+//         }
+//         @include verticalbp {
+//             margin-left: -3%;
+//         }
+//     }
+
+//     @include tablet {
+//         @include verticalbp {
+//             margin-left: -3%;
+//         }
+//     }
+
+//     @media (min-width: 1024px) {
+//         @include horizontalbp {
+//             margin-left: -3%;
+//         }
+//     }
+
+//     @include laptop {
+//         margin-left: -2%;
+//     }
+
+//     @include desktop {
+//         margin-left: -2%;
+//     }
+// }
+
+// .swiper-button-next {
+//     @include mobile {
+//         @include horizontalbp {
+//             margin-right: -3%;
+//         }
+//         @include verticalbp {
+//             margin-right: -3%;
+//         }
+//     }
+
+//     @include tablet {
+//         @include verticalbp {
+//             margin-right: -3%;
+//         }
+//     }
+
+//     @media (min-width: 1024px) {
+//         @include horizontalbp {
+//             margin-right: -3%;
+//         }
+//     }
+
+//     @include laptop {
+//         margin-right: -2%;
+//     }
+
+//     @include desktop {
+//         margin-right: -2%;
+//     }
+// }
 
 .exp-close-icon {
     fill: $Indigo;
@@ -309,7 +376,7 @@ $Light-accent: rgb(58, 58, 60);
     }
 
     @include laptop {
-        display: grid;
+        display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 2fr)) !important;
         gap: 2.5rem !important;
     }
@@ -318,6 +385,7 @@ $Light-accent: rgb(58, 58, 60);
 .exp-skills {
     width: 100%;
     height: 100%;
+    overflow: visible !important;
 
     @include mobile {
         margin-top: 0 !important;
@@ -418,8 +486,12 @@ $Light-accent: rgb(58, 58, 60);
         fill: #264ed4;
     }
 
-    .js {
-        fill: #f7df1e;
+    // .js {
+    //     fill: #f7df1e;
+    // }
+
+    .ts {
+        fill: #3178c6;
     }
 
     .sass {
@@ -598,5 +670,13 @@ $Light-accent: rgb(58, 58, 60);
 
     @include laptop {
         margin-top: 1rem !important;
+    }
+}
+
+.swiper {
+    &.custom-swiper {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.15s ease-in-out;
     }
 }
